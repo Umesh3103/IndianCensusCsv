@@ -7,6 +7,7 @@ public class CensusAnalyserException extends Exception {
 	}
 
 	ExceptionType type;
+	private String name;
 
 	public CensusAnalyserException(String message, ExceptionType type) {
 		super(message);
@@ -16,5 +17,10 @@ public class CensusAnalyserException extends Exception {
 	public CensusAnalyserException(String message, ExceptionType type, Throwable cause) {
 		super(message, cause);
 		this.type = type;
+	}
+
+	public CensusAnalyserException(String message, String name) {
+		super(message);
+		this.name = name;
 	}
 }
